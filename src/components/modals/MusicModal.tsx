@@ -54,6 +54,7 @@ const MusicModal = ({
 	const { key: chartKey } = MODAL_CONFIGS.chart;
 	const { key: signInKey } = MODAL_CONFIGS.signIn;
 	const { key: addSongKey } = MODAL_CONFIGS.addSong;
+	const { key: myFavoritesKey } = MODAL_CONFIGS.myFavorites;
 
 	const { openModal } = useModalStore();
 
@@ -97,6 +98,10 @@ const MusicModal = ({
 		openModal(addSongKey as ModalType);
 	};
 
+	const handleOpenMyFavoritesModal = () => {
+		openModal(myFavoritesKey as ModalType);
+	};
+
 	useEffect(() => {
 		if (playerRef.current && songs[currentSongIndex]) {
 			playerRef.current.src = songs[currentSongIndex].url;
@@ -108,7 +113,7 @@ const MusicModal = ({
 
 	const musicModalnavItems: INavItemProps[] = [
 		{ shortcut: 'c', label: 'hart', onClick: handleOpenChartModal },
-		{ shortcut: 'p', label: 'laylist' },
+		{ shortcut: 'p', label: 'laylist', onClick: handleOpenMyFavoritesModal },
 	];
 
 	const musicControlbuttons: IButtonProps[] = [
@@ -163,7 +168,7 @@ const MusicModal = ({
 			style={style}
 			modalKey={musicKey as ModalType}
 		>
-			<Navigation navItems={musicModalnavItems} onClick={handleOpenChartModal} />
+			<Navigation navItems={musicModalnavItems} />
 
 			<Frame
 				className="md:w-[520px] py-4 px-4 xl:py-[19px] xl:px-[21px] xl:w-[620px]"

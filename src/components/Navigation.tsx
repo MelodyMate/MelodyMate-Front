@@ -1,12 +1,11 @@
-import React, { MouseEventHandler } from 'react';
+import React from 'react';
 import NavItem, { INavItemProps } from './NavItem';
 
 interface INavigationProps {
 	navItems: INavItemProps[];
-	onClick?: MouseEventHandler<HTMLLIElement>;
 }
 
-const Navigation = ({ navItems, onClick }: INavigationProps) => {
+const Navigation = ({ navItems }: INavigationProps) => {
 	return (
 		<nav className="py-[5px] pl-[6px]">
 			<ul className="flex space-x-[10px] font-eng font-medium">
@@ -15,7 +14,7 @@ const Navigation = ({ navItems, onClick }: INavigationProps) => {
 						key={index}
 						shortcut={item.shortcut}
 						label={item.label}
-						onClick={onClick}
+						onClick={item.onClick}
 					/>
 				))}
 			</ul>

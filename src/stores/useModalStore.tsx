@@ -43,7 +43,15 @@ const createInitialModalsState = (modalKeys: ModalType[]): ModalStateType => {
 	}
 	return state as ModalStateType;
 };
-const ModalKeysArray: ModalType[] = ['music', 'chart', 'signIn', 'signUp', 'loading', 'addSong'];
+const ModalKeysArray: ModalType[] = [
+	'music',
+	'chart',
+	'signIn',
+	'signUp',
+	'loading',
+	'addSong',
+	'myFavorites',
+];
 
 const initialModalZIndexes = createInitialModalZIndexes(ModalKeysArray, 5);
 const initialModalsState = createInitialModalsState(ModalKeysArray);

@@ -1,1 +1,8 @@
-export type ModalType = 'music' | 'chart' | 'signIn' | 'signUp' | 'loading' | 'addSong';
+export type ModalType =
+	| 'music'
+	| 'chart'
+	| 'signIn'
+	| 'signUp'
+	| 'loading'
+	| 'addSong'
+	| 'myFavorites';

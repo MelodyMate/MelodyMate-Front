@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { CdMusic, Drvspace7, Computer, Keys } from '@react95/icons';
+import { CdMusic, Drvspace7, Computer, Keys, Msrating109 } from '@react95/icons';
 
 export const MODAL_CONFIGS = {
 	music: {
@@ -25,6 +25,12 @@ export const MODAL_CONFIGS = {
 		icon: Computer,
 		label: 'SignUp',
 		key: 'signUp',
+	},
+	myFavorites: {
+		component: lazy(() => import('../components/modals/MyFavoritesModal')),
+		icon: Msrating109,
+		label: 'MyFavorites',
+		key: 'myFavorites',
 	},
 	addSong: {
 		component: lazy(() => import('../components/modals/AddSongModal')),

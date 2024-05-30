@@ -55,3 +55,28 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+/* 스크롤바 버튼의 좌우 화살표 스타일 */
+::-webkit-scrollbar-button:horizontal:decrement {
+	background: #cdcfcd;
+	border-top: 2px solid #e2e3e3;
+	border-bottom: 2px solid #63666a;
+	border-left: 2px solid #e2e3e3;
+	border-right: 2px solid #63666a;
+	box-shadow: inset 1px 0px 0px #63666a, inset -1px 0px 0px #e2e3e3;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="%2363666a" d="M7 1l-5 5 5 5z"></path></svg>');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+::-webkit-scrollbar-button:horizontal:increment {
+	background: #cdcfcd;
+	border-top: 2px solid #e2e3e3;
+	border-bottom: 2px solid #63666a;
+	border-left: 2px solid #e2e3e3;
+	border-right: 2px solid #63666a;
+	box-shadow: inset 1px 0px 0px #e2e3e3, inset -1px 0px 0px #63666a;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12"><path fill="%2363666a" d="M1 1l5 5-5 5z"></path></svg>');
+	background-repeat: no-repeat;
+	background-position: center;
+}

@@ -113,7 +113,7 @@ const MusicModal = ({
 
 	const musicModalnavItems: INavItemProps[] = [
 		{ shortcut: 'c', label: 'hart', onClick: handleOpenChartModal },
-		{ shortcut: 'p', label: 'laylist', onClick: handleOpenMyFavoritesModal },
+		{ shortcut: 'm', label: 'y favorites', onClick: handleOpenMyFavoritesModal },
 	];
 
 	const musicControlbuttons: IButtonProps[] = [
